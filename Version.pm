@@ -1,1 +1,1 @@
-$VERSION = "0.82b";
+$VERSION = "0.83b";

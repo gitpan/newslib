@@ -1,5 +1,4 @@
-$VERSION = '0.70b';
-# -*- Perl -*- # Fri Feb 13 16:23:07 CST 2004 
+# -*- Perl -*- Thu Apr 22 10:49:53 CDT 2004 
 #############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>.
 # Based on a script by Chris Lewis <clewis@bnr.ca>, and relying almost
@@ -12,13 +11,21 @@ $VERSION = '0.70b';
 
 =head1 NAME
 
-News::Cancel - a module to generate accurate cancel messages 
+News::Article::Cancel - a module to generate accurate cancel messages 
 
 =head1 SYNOPSIS
 
-  use News::Cancel;
+  use News::Article::Cancel;
+  my $article = new News::Article::Cancel(\*STDIN);
+  next if $article->verify_resurrected($GROUP);
 
-See below for the added functions.
+  my $from    = $article->header('from') || "";
+  my $subject = $article->header('subject') || "";
+  my $xauth   = $article->header('x-auth') || "";
+  my $mid     = $article->header('message-id') || "";
+  my $cancel = $article->make_cancel( $NAME, "moder",
+                "From: $from", "Subject: $subject", "Message-ID: $mid",
+                "X-Auth: $xauth");
 
 =head1 DESCRIPTION
 
@@ -30,16 +37,17 @@ messages in moderated newsgroups.
 
 =over 2
 
-=item use News::Cancel;
+=item use News::Article::Cancel;
 
 =back
 
-News::Cancel is an object similar to News::Article that adds a single new
-function: make_cancel().
+News::Article::Cancel is class that inherits News::Article and adds two
+new functions: make_cancel() and verify_resurrected().
 
 =cut
 
-package News::Cancel;
+package News::Article::Cancel;
+use vars qw($VERSION); 	$VERSION = '0.71';
 require 5;			# Requires Perl 5
 
 use News::Article;
@@ -245,6 +253,10 @@ web at <URL:http://www.killfile.org/faqs/cancel.html>.
 
 Make sure I've got all of the different cancel types taken care of.
 
+=head1 SEE ALSO
+
+B<pgpmoose>, at B<http://www.killfile.org/~tskirvin/software/pgpmoose/>
+
 =head1 AUTHOR
 
 Written by Tim Skirvin <tskirvin@killfile.org>, based on a shell script by
@@ -257,20 +269,25 @@ be redistributed under the same terms as Perl itself.
 
 =cut
 
-# History
-# v0.1a - Thu Apr 22 13:45:25 CDT 1999
-#   First version.  Unfinished, but it needs to be here so that I can get
-#   pgpmoose.pl working again.
-# v0.2a - Wed Jul  7 19:28:17 CDT 1999
-#   Got the documentation done and fixed stuff up in general.  
-# v0.5b - Mon Feb  7 17:10:35 CST 2000
-#   Put it up on the website, made a few cosmetic changes.  Need to work on 
-#   an installation script and stuff soon.
-# v0.6b - Fri Feb 11 16:27:41 CST 2000
-#   Added verify_resurrected.  We'll see what happens.
-# v0.61b - Mon Mar 13 18:08:57 CST 2000
-#   Made some more hacks on the "make a from line" code.  Ick.
-# v0.70b - Fri Feb 13 16:22:47 CST 2004 
-#   Why was I using News::Article namespace?  I suck.  Oh well.
+###############################################################################
+### Version History ###########################################################
+###############################################################################
+# v0.1a		Thu Apr 22 13:45:25 CDT 1999
+### First version.  Unfinished, but it needs to be here so that I can get
+### pgpmoose.pl working again.
+# v0.2a 	Wed Jul  7 19:28:17 CDT 1999
+# Got the documentation done and fixed stuff up in general.  
+# v0.5b 	Mon Feb  7 17:10:35 CST 2000
+### Put it up on the website, made a few cosmetic changes.  Need to work on 
+### an installation script and stuff soon.
+# v0.6b 	Fri Feb 11 16:27:41 CST 2000
+### Added verify_resurrected.  We'll see what happens.
+# v0.61b 	Mon Mar 13 18:08:57 CST 2000
+### Made some more hacks on the "make a from line" code.  Ick.
+# v0.70b 	Fri Feb 13 16:22:47 CST 2004 
+### Why was I using News::Article namespace?  I suck.  Oh well.
+# v0.71		Thu Apr 22 10:48:48 CDT 2004 
+### Cleaning up the code and comments to match my normal work.  Generally
+### matching things to the new version of pgpmoose.  Better docs.
 
 1;

@@ -1,5 +1,5 @@
-our $VERSION = "1.00";
-# -*- Perl -*- # Thu Mar 18 14:23:49 CST 2004 
+our $VERSION = "1.01";
+# -*- Perl -*- # Mon Mar 22 11:34:43 CST 2004 
 ###############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>
 # Copyright 1996-2004 Tim Skirvin.  Redistribution terms are in the
@@ -322,9 +322,9 @@ sub clean_control {
   return undef;
 }
 
-=item distibution ( ARRAY )
+=item clean_distibution ( ARRAY )
 
-=item keywords ( ARRAY )
+=item clean_keywords ( ARRAY )
 
 Takes an array of strings and returns a properly formatted array of their 
 contents.  And yes, these are the same function.
@@ -611,3 +611,5 @@ Copyright 1996-2004, Tim Skirvin.
 
 # v1.00		Thu Mar 18 14:23:29 CST 2004 
 ### Actually trying to get this into a useful, releasable format now.  
+# v1.01		Mon Mar 22 11:34:35 CST 2004 
+### Documentation fixes.

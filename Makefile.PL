@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 my $modules = {};  my $manpage = {};
 foreach my $module ( 
    	qw( Net::NNTP::Auth Net::NNTP::Proxy Net::NNTP::Client
-	    Net::NNTP::Functions News::NNTPAuth News::Cancel 
+	    Net::NNTP::Functions News::NNTPAuth News::Article::Cancel 
 	    News::Article::Ref News::Article::Response 
 	    News::Article::Clean ) ) {
   my $file = $module;

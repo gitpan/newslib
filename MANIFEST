@@ -8,7 +8,7 @@ Version.pm
 News/Article/Response.pm
 News/Article/Ref.pm
 News/Article/Clean.pm
-News/Cancel.pm
+News/Article/Cancel.pm
 News/NNTPAuth.pm
 Net/NNTP/Auth.pm
 Net/NNTP/Proxy.pm

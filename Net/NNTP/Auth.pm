@@ -1,8 +1,7 @@
-$VERSION = "0.5b";
-# -*- Perl -*-
+# -*- Perl -*- Thu Apr 22 11:01:27 CDT 2004 
 ###############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>
-# Copyright 2000, Tim Skirvin.  Redistribution terms are below.
+# Copyright 2000-2004, Tim Skirvin.  Redistribution terms are below.
 ###############################################################################
 
 =head1 NAME
@@ -39,6 +38,7 @@ then be passed into Net::NNTP's B<nntpauth()> function.
 =cut
 
 package Net::NNTP::Auth;
+use vars qw( $VERSION ); $VERSION = "1.0";
 
 use strict;
 use Exporter;
@@ -94,24 +94,29 @@ sub nntppass { @{nntpauth(@_)}[1] }
 
 =head1 NOTES
 
-Please note that this is an extremely small module.  The only real 
-purpose is to standardize on the ~/.nntpauth format that I've been 
-using for a long time.  It's convenient.  Why not?
-
-=head1 TODO
-
-Put this in CPAN.  Maybe.  It is awfully small.  Maybe it would be best if
-I made it a part of a news library module instead...
+Please note that this is an extremely small module.  The only real purpose
+is to standardize on the ~/.nntpauth format that I've been using for a
+long time.  It's convenient.  Why not?
 
 =head1 AUTHOR
 
 Written by Tim Skirvin <tskirvin@killfile.org>
 
+=head1 LICENSE
+
+This code may be redistributed under the same terms as Perl itself.
+
 =head1 COPYRIGHT
 
-Copyright 2000 by Tim Skirvin <tskirvin@killfile.org>.  This code may be
-redistributed under the same terms as Perl itself.
+Copyright 2000-2004 by Tim Skirvin <tskirvin@killfile.org>.  This code may
+be redistributed under the same terms as Perl itself.
 
 =cut
 
 1;
+
+###############################################################################
+### Version History ###########################################################
+###############################################################################
+# v1.0		Thu Apr 22 11:01:44 CDT 2004 
+### Nothing's changed in four years; it's working; let's call this v1.0.

@@ -1,5 +1,10 @@
 Revision history for Perl extension NewsLib
 
+0.83b Thu Apr 22 10:50:44 CDT 2004 
+	- Put News::Cancel back in as News::Article::Cancel.  It is now,
+	  though, just a module that inherits News::Article.
+	- Net::NNTP::Auth is now v1.0 (no real changes except docs)
+
 0.82b Thu Mar 18 14:28:37 CST 2004 
 	- Added News::Article::Clean.
 
