@@ -1,12 +1,12 @@
-$VERSION = '0.61b';
-# -*- Perl -*-
+$VERSION = '0.70b';
+# -*- Perl -*- # Fri Feb 13 16:23:07 CST 2004 
 #############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>.
 # Based on a script by Chris Lewis <clewis@bnr.ca>, and relying almost
 # exclusively on the News::Article package written by Andrew Gierth 
 # <andrew@erlenstar.demon.co.uk>.  Thanks, folks. 
 # 
-# Copyright 2000 Tim Skirvin.  Redistribution terms are in the
+# Copyright 2000-2004 Tim Skirvin.  Redistribution terms are in the
 # documentation, and I'm sure you can find them.
 #############################################################################
 
@@ -34,18 +34,21 @@ messages in moderated newsgroups.
 
 =back
 
-News::Cancel adds a single subroutine to the News::Article package -
-make_cancel.
+News::Cancel is an object similar to News::Article that adds a single new
+function: make_cancel().
 
 =cut
 
-package News::Article;
+package News::Cancel;
 require 5;			# Requires Perl 5
 
 use News::Article;
+use Exporter;
 use strict;
 
-use vars qw($KILL_CANCELS);
+use vars qw($KILL_CANCELS @ISA @EXPORT @EXPORT_OK );
+
+@ISA = qw( Exporter News::Article );
 
 =head2 Article Methods
 
@@ -188,6 +191,7 @@ sub make_cancel {
   
   return $cancel;
 }
+push @EXPORT, qw( make_cancel );
 
 =over 4
 
@@ -224,6 +228,7 @@ sub verify_resurrected {
 
   $newarticle->verify_pgpmoose($group);
 }
+push @EXPORT, qw( verify_resurrected );
 
 =head1 NOTES
 
@@ -247,8 +252,8 @@ Chris Lewis <clewis@bnr.ca>.
 
 =head1 COPYRIGHT
 
-Copyright 2000 by Tim Skirvin <tskirvin@killfile.org>.  This code may be
-redistributed under the same terms as Perl itself.
+Copyright 2000-2004 by Tim Skirvin <tskirvin@killfile.org>.  This code may
+be redistributed under the same terms as Perl itself.
 
 =cut
 
@@ -265,5 +270,7 @@ redistributed under the same terms as Perl itself.
 #   Added verify_resurrected.  We'll see what happens.
 # v0.61b - Mon Mar 13 18:08:57 CST 2000
 #   Made some more hacks on the "make a from line" code.  Ick.
+# v0.70b - Fri Feb 13 16:22:47 CST 2004 
+#   Why was I using News::Article namespace?  I suck.  Oh well.
 
 1;

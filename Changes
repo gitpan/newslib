@@ -1,5 +1,12 @@
 Revision history for Perl extension NewsLib
 
+0.82b Thu Mar 18 14:28:37 CST 2004 
+	- Added News::Article::Clean.
+
+0.81b Fri Feb 13 16:24:01 CST 2004 
+	- Made News::Cancel into its own module, not a sub-version of
+	  News::Article.  I'm not entirely happy with this, but it's a start.
+
 0.80b Fri Oct 10 10:11:09 CDT 2003 
 	- Added News::Article::Response
 	- Upgraded News::Article to v1.27 	
