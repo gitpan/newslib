@@ -1,0 +1,25 @@
+Revision history for Perl extension NewsLib
+
+0.80b Fri Oct 10 10:11:09 CDT 2003 
+	- Added News::Article::Response
+	- Upgraded News::Article to v1.27 	
+	- Added Net::NNTP::Functions
+	- Updated Makefile.PL for convenience
+	- Minor Net::NNTP::Proxy changes
+
+0.71b Wed Jan 30 13:06:04 CST 2002
+	- Included Net::NNTP::Auth and News::Cancel
+
+0.7b  Wed Jan 30 09:36:22 CST 2002
+	- Replaced push() with CORE::push() to avoid system errors
+	- Started sorting active() and active_times() outputs
+	- Changed to a variable EOL string ("\r\n")
+	- Fixed bugs in _list_active() and _list() with returning arrays
+	- Fixed article() to deal with embedded newlines in headers
+	- Included News::Article v1.26 
+
+0.61b Tue Aug 28 08:36:36 CDT 2001
+	- updated Net::NNTP::Proxy to use "\r\n" instead of "\n"
+
+0.6b  Mon Aug 27 16:34:01 CDT 2001
+	- original released version, using code from newsproxy.pl
