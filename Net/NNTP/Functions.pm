@@ -1,10 +1,11 @@
+$VERSION = "0.21";
 package Net::NNTP::Functions;
+our $VERSION = "0.21";     
 # -*- Perl -*- 		# Fri Oct 10 10:17:44 CDT 2003 
 #############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>.  Copyright 2003, Tim
 # Skirvin.  Redistribution terms are below.
 #############################################################################
-use vars qw( $VERSION ); $VERSION = "0.2a";     
 
 =head1 NAME
 
@@ -130,6 +131,7 @@ distributed under the same terms as Perl itself.
 ###############################################################################
 ### Version History ###########################################################
 ###############################################################################
-
-# v0.2a - Fri Oct 10 10:17:44 CDT 2003 
-## First commented version.
+# v0.2a 	Fri Oct 10 10:17:44 CDT 2003 
+### First commented version.
+# v0.21		Thu Apr 22 11:42:13 CDT 2004 
+### No real changes; just version number change.

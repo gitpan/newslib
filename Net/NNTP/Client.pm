@@ -1,4 +1,7 @@
-$VERSION = '0.5a';
+$VERSION = 0.6;
+package Net::NNTP::Client;
+our $VERSION = '0.6';
+
 # -*- Perl -*-
 ###############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>
@@ -30,7 +33,6 @@ enough information to reconnect again in the case of a hang-up.
 
 =cut
 
-package Net::NNTP::Client;
 
 use strict;		# Good programming is our friend
 use Net::NNTP;		
@@ -354,8 +356,12 @@ sub DESTROY {}
 
 1;
 
-# Version History
-# v0.5a - Thu Nov  9 17:25:24 CST 2000
-#   First version ready for release.  Generally does its job.  The caching
-#   work isn't the best, and I'm not sure about the robustness of the 
-#   reconnect()/isconnected() code.  
+###############################################################################
+### Version History ###########################################################
+###############################################################################
+# v0.5a 	Thu Nov  9 17:25:24 CST 2000
+### First version ready for release.  Generally does its job.  The caching
+### work isn't the best, and I'm not sure about the robustness of the 
+### reconnect()/isconnected() code.  
+# v0.6		Thu Apr 22 11:43:07 CDT 2004 
+### No real changes, just internal layout changes.

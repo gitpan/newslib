@@ -1,10 +1,12 @@
+$VERSION = "0.5";
 package News::Article;
+our $VERSION = "0.5";	
+
 # -*- Perl -*-		# Fri Oct 10 09:55:42 CDT 2003 
 #############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>.  Copyright 2003, Tim
 # Skirvin.  Redistribution terms are below.
 #############################################################################
-use vars qw( $VERSION ); $VERSION = "0.5a";	
 
 =head1 NAME
 
@@ -294,3 +296,5 @@ distributed under the same terms as Perl itself.
 
 # v0.5a 	 Fri Oct 10 09:55:42 CDT 2003 
 ### First commented version.
+# v0.5		Thu Apr 22 12:57:16 CDT 2004 
+### Just internal layout/documentation changes.

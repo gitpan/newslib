@@ -1,3 +1,7 @@
+$VERSION = 1.0;
+package Net::NNTP::Auth;
+our $VERSION = "1.0";
+
 # -*- Perl -*- Thu Apr 22 11:01:27 CDT 2004 
 ###############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>
@@ -37,8 +41,6 @@ then be passed into Net::NNTP's B<nntpauth()> function.
 
 =cut
 
-package Net::NNTP::Auth;
-use vars qw( $VERSION ); $VERSION = "1.0";
 
 use strict;
 use Exporter;

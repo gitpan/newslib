@@ -1,4 +1,7 @@
-our $VERSION = "1.01";
+$VERSION = "1.02";
+package News::Article;
+our $VERSION = "1.02";
+
 # -*- Perl -*- # Mon Mar 22 11:34:43 CST 2004 
 ###############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>
@@ -32,7 +35,6 @@ News::Article.
 
 =cut
 
-package News::Article;
 
 ###############################################################################
 ### main() ####################################################################
@@ -613,3 +615,5 @@ Copyright 1996-2004, Tim Skirvin.
 ### Actually trying to get this into a useful, releasable format now.  
 # v1.01		Mon Mar 22 11:34:35 CST 2004 
 ### Documentation fixes.
+# v1.02		Thu Apr 22 11:40:18 CDT 2004 
+### Just fixing things to make them better for Perl.

@@ -1,3 +1,7 @@
+$VERSION = '0.71';
+package News::Article::Cancel;
+our $VERSION = '0.71';
+
 # -*- Perl -*- Thu Apr 22 10:49:53 CDT 2004 
 #############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>.
@@ -46,8 +50,6 @@ new functions: make_cancel() and verify_resurrected().
 
 =cut
 
-package News::Article::Cancel;
-use vars qw($VERSION); 	$VERSION = '0.71';
 require 5;			# Requires Perl 5
 
 use News::Article;

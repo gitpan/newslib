@@ -1,10 +1,12 @@
-$VERSION = "0.1a";
+$VERSION = "0.2";
+package News::Article::Ref;
+our $VERSION = "0.2";
+
 # -*- Perl -*-
 #############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>.  Copyright 2000-2002, Tim 
 # Skirvin.  Redistribution terms are below.
 #############################################################################
-package News::Article::Ref;
 
 =head1 NAME
 
@@ -460,6 +462,10 @@ This code may be distributed under the same terms as Perl itself.
 
 =cut
 
-### History
-# v0.1a - Thu Mar  7 17:07:20 CST 2002
-## First commented version.
+###############################################################################
+### Version History ###########################################################
+###############################################################################
+# v0.1a 	Thu Mar  7 17:07:20 CST 2002
+### First commented version.
+# v0.2		Thu Apr 22 11:40:48 CDT 2004 
+### No real changes, just version numbers.

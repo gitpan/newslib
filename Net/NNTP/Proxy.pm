@@ -1,4 +1,7 @@
-$VERSION = '0.53a';
+$VERSION = '0.54';
+package Net::NNTP::Proxy;
+our $VERSION = '0.54';
+
 # -*- Perl -*-
 ###############################################################################
 # Written by Tim Skirvin <tskirvin@killfile.org>
@@ -8,7 +11,6 @@ $VERSION = '0.53a';
 # Copyright 2000-2002, Tim Skirvin.  Redistribution terms are below.
 ###############################################################################
 
-package Net::NNTP::Proxy;
 
 =head1 NAME
 
@@ -853,3 +855,5 @@ redistributed under the same terms as Perl itself.
 #   bugs in _list_active and the line with returning arrays.
 # v0.53a - Wed Jan 30 09:32:27 CST 2002
 #   Fixed article() to have uniform newlines.
+# v0.54		Thu Apr 22 11:44:01 CDT 2004 
+### No real changes, just internal layout changes.
